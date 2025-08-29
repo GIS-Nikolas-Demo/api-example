@@ -1,0 +1,17 @@
+﻿name: Org Reviewer
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  call-org-reviewer:
+    uses: GIS-Nikolas-Demo/reviewer-workflow/.github/workflows/reviewer.yml@main
+    with:
+      # opcional, si difiere del nombre del repo:
+      microservice_name: "ms-orders"
+      # opcional: custom rules o config repo:
+      # rules_path: ".org-reviewer/rules.yml"
+      # config_repo: "your-org/configs"
+    secrets:
+      GH_ORG_TOKEN: ${{ secrets.GH_ORG_TOKEN }}

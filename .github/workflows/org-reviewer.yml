@@ -6,7 +6,7 @@ on:
 
 jobs:
   call-org-reviewer:
-    uses: your-org/reviewer-workflow/.github/workflows/reviewer.yml@main
+    uses: GIS-Nikolas-Demo/reviewer-workflow/.github/workflows/reviewer.yml@main
     with:
       # opcional, si difiere del nombre del repo:
       microservice_name: "ms-orders"
